@@ -1,0 +1,42 @@
+html, body {
+	font: 14px/1.21 "b612" ,'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.result {
+	padding: 10px;
+	margin: 10px;
+	background: white;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+
+.page {
+	display: flex;
+	height: 100vh;
+}
+
+.page main {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 4em 2em;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+img {
+	width: 100%;
+}
+
+.chip {
+	padding: 1.2em !important;
+}
+
+h1 {
+	font-size: 3.375em;
+	font-weight: 600;
+}

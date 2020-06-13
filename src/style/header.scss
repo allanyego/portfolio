@@ -1,0 +1,25 @@
+.navbar {
+  flex-direction: column;
+  width: 50px;
+
+  section {
+    flex-direction: inherit;
+    align-items: center;
+    width: 50px;
+  }
+
+  .navbar-center {
+    display: grid;
+    gap: 3em;
+
+    a {
+      justify-self: center;
+      font-size: 1.7em;
+      display: block;
+
+      &:visited {
+        color: #5755d9;
+      }
+    }
+  }
+}
