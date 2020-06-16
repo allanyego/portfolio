@@ -21,8 +21,8 @@
       font-size: 1.7em;
       display: block;
 
-      &:visited {
-        color: #5755d9;
+      &:active {
+        color: $primary-color !important;
       }
     }
   }
@@ -37,10 +37,6 @@
 
     section {
       width: 60px;
-    }
-
-    .navbar-links--small {
-        display: none;
     }
   }
 }

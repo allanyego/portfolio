@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../style/header.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Nav = () => {
   const [navOpen, setNavOpen] = useState(false);
   const toggle = () => setNavOpen(!navOpen);
 
   return (
-    <header className="navbar">
+    <header className="navbar bg-gray">
       <section>
         <img
           src="logo.png"
@@ -37,30 +37,30 @@ export const Nav = () => {
       }}>
         <FontAwesomeIcon icon="bars" onClick={toggle} />
       </section>
-      <NavbarLinks open={navOpen} className="hide-md" />
+      <NavbarLinks open={navOpen} />
     </header>
   );
 };
 
-function NavLink({ path, icon, tooltipText }) {
+function _Link({ path, icon, tooltipText }) {
   return (
-    <Link
+    <NavLink
       to={path}
-      className="tooltip tooltip-right"
+      className="tooltip tooltip-right text-dark"
       data-tooltip={tooltipText}
     >
       <FontAwesomeIcon icon={icon} />
-    </Link>
+    </NavLink>
   );
 }
 
 function NavbarLinks({open=false}) {
     return !open ? null :
-      <div className="navbar-links">
-        <NavLink path="/" icon="igloo" tooltipText="Home" />
-        <NavLink path="/about" icon="user" tooltipText="About" />
-        <NavLink path="/skills" icon="cogs" tooltipText="Skills" />
-        <NavLink path="/projects" icon="eye" tooltipText="Projects" />
-        <NavLink path="/contact" icon="envelope" tooltipText="Contact" />
+      <div className="navbar-links bg-gray">
+        <_Link path="/" icon="igloo" tooltipText="Home" />
+        <_Link path="/about" icon="user" tooltipText="About" />
+        <_Link path="/skills" icon="cogs" tooltipText="Skills" />
+        <_Link path="/projects" icon="eye" tooltipText="Projects" />
+        <_Link path="/contact" icon="envelope" tooltipText="Contact" />
       </div>
 }
