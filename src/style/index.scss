@@ -1,9 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html, body {
 	font: 14px/1.21 "b612" ,'Helvetica Neue', arial, sans-serif;
 	font-weight: 400;
 	color: #444;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
 }
 
 .result {
@@ -15,7 +23,8 @@ html, body {
 
 .page {
 	display: flex;
-	height: 100vh;
+    height: 99vh;
+	max-height: 100vh;
 }
 
 .page main {
@@ -26,6 +35,11 @@ html, body {
 	padding: 4em 2em;
 	overflow-y: auto;
 	overflow-x: hidden;
+
+    .bg {
+        position: absolute;
+        width: 324.81px;
+    }
 }
 
 img {
@@ -39,4 +53,30 @@ img {
 h1 {
 	font-size: 3.375em;
 	font-weight: 600;
+}
+
+@media screen and (min-width: 961px) {
+    .page {
+        main {
+            .bg {
+                right: 5vw;
+                top: calc(50% - 162.4px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .page {
+        flex-direction: column;
+
+        main {
+            margin-top: 60px;
+
+            .bg {
+              top: calc(50% - 162.4px);
+              left: calc(50% - 152px);
+            }
+        }
+    }
 }
