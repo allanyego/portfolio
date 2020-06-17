@@ -1,27 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../style/header.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Nav = () => {
+  const [navOpen, setNavOpen] = useState(false);
+  const toggle = () => setNavOpen(!navOpen);
+
   return (
-    <header className="navbar">
-      <section className="navbar-section">
+    <header className="navbar bg-gray">
+      <section>
         <img
           src="logo.png"
           className="img-fit-cover img-responsive"
           alt="yego logo"
         />
       </section>
-      <section className="navbar-center">
-        <NavLink path="/" icon="igloo" tooltipText="Home" />
-        <NavLink path="/about" icon="user" tooltipText="About" />
-        <NavLink path="/skills" icon="cogs" tooltipText="Skills" />
-        <NavLink path="/projects" icon="eye" tooltipText="Projects" />
-        <NavLink path="/contact" icon="envelope" tooltipText="Contact" />
+      <section className="links hide-sm">
+        <NavbarLinks open={true} />
       </section>
-      <section className="navbar-section">
+      <section className="social hide-sm">
         <a href="#" className="btn btn-link">
           <i data-eva="linkedin-outline" />
         </a>
@@ -29,18 +28,40 @@ export const Nav = () => {
           <i data-eva="github-outline" />
         </a>
       </section>
+      <section className="humburger"
+        style={{
+        fontSize: "2em",
+        paddingRight: ".5em",
+        display: "flex",
+        justifyContent: "flex-end"
+      }}>
+        <FontAwesomeIcon icon="bars" onClick={toggle} />
+      </section>
+      <NavbarLinks open={navOpen} />
     </header>
   );
 };
 
-function NavLink({ path, icon, tooltipText }) {
+function _Link({ path, icon, tooltipText }) {
   return (
-    <Link
+    <NavLink
       to={path}
-      className="tooltip tooltip-right"
+      className="tooltip tooltip-right text-dark"
       data-tooltip={tooltipText}
+      activeClassName="active"
     >
       <FontAwesomeIcon icon={icon} />
-    </Link>
+    </NavLink>
   );
+}
+
+function NavbarLinks({open=false}) {
+    return !open ? null :
+      <div className="navbar-links bg-gray">
+        <_Link path="/home" icon="igloo" tooltipText="Home" />
+        <_Link path="/about" icon="user" tooltipText="About" />
+        <_Link path="/skills" icon="cogs" tooltipText="Skills" />
+        <_Link path="/projects" icon="eye" tooltipText="Projects" />
+        <_Link path="/contact" icon="envelope" tooltipText="Contact" />
+      </div>
 }

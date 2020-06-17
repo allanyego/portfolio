@@ -1,14 +1,20 @@
+@import "node_modules/spectre.css/src/_variables";
+
 .navbar {
   flex-direction: column;
-  width: 50px;
+  width: 60px;
+  position: relative;
+
+  img {
+    max-width: 60px;
+  }
 
   section {
     flex-direction: inherit;
     align-items: center;
-    width: 50px;
   }
 
-  .navbar-center {
+  .navbar-links {
     display: grid;
     gap: 3em;
 
@@ -16,10 +22,66 @@
       justify-self: center;
       font-size: 1.7em;
       display: block;
+      
+      &:hover {
+        color: $primary-color !important;
+      }
 
-      &:visited {
-        color: #5755d9;
+      &.active {
+        color: $primary-color !important;
       }
     }
   }
+
+  .humburger {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .navbar {
+
+    section {
+      width: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    flex-direction: row;
+    width: 100%;
+    position: fixed;
+
+    .links, .social {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+    }
+
+    .links {
+
+      .navbar-links {
+        grid-auto-flow: column;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+
+        .navbar-links {
+          position: fixed;
+          top: 60px;
+          width: 100%;
+          grid-auto-flow: column;
+          gap: 0;
+          padding: 1em 1.5em;
+        }
+
+      .humburger {
+        display: flex !important;
+      }
+    }
 }

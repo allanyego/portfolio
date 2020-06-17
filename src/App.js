@@ -24,13 +24,13 @@ export default function App() {
         <Nav />
         <main>
           <Switch>
-            <Route path="/" exact component={Home} />
+            <Route path="/home" exact component={Home} />
             <Route path="/about" exact component={About} />
             <Route path="/skills" exact component={Skills} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/projects" exact component={Projects} />
             <Route path="*">
-              <Redirect to="/" />
+              <Redirect to="/home" />
             </Route>
           </Switch>
         </main>
