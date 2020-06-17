@@ -33,7 +33,10 @@ export const Projects = () => {
 
 function Project({ project }) {
   return (
-    <div className="column col-xs-12 col-sm-6 col-3">
+    <div className="column col-xs-12 col-sm-6 col-md-4 col-3"
+    style={{
+        marginBottom: "0.7em"
+    }}>
       <div className="card project-card">
         <div className="card-header">
           <h3>{project.name}</h3>

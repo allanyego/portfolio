@@ -17,7 +17,9 @@ const charPoses = {
 
 export const Section = ({ title, children }) => {
   return (
-    <section>
+    <section style={{
+        maxHeight: "100%"
+    }}>
       <h1>
         <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
           {title}

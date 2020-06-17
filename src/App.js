@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import * as eva from "eva-icons";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,9 +14,6 @@ import { Contact } from "./pages/Contact";
 import { Projects } from "./pages/Projects";
 
 export default function App() {
-  useEffect(() => {
-    eva.replace();
-  }, []);
   return (
     <div className="page">
       <Router>
