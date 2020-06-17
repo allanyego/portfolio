@@ -20,7 +20,7 @@ export const Skills = () => {
   return (
     <Section title="Skills & expertise">
       <div className="columns">
-        <div className="column col-6">
+        <div className="column col-sm-12 col-6">
           <p>
             My main area of expertise is JavaScript developing small to medium
             scale systems leveraging the strong ecosystem of frameworks (React,
@@ -36,7 +36,7 @@ export const Skills = () => {
           </p>
           <p>Find me on LinkedIn or just contact me.</p>
         </div>
-        <div className="column col-6">
+        <div className="column col-sm-12 col-6">
           {skills.map(skill => (
             <span className="chip" key={skill}>
               {skill}

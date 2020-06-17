@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <Section title="About me">
       <div className="columns">
-        <div className="column col-6">
+        <div className="column col-sm-12 col-6">
           <p>A tech hobbyist based in Eldoret, Kenya</p>
           <p>
             My interest in software took root back in high school and I was
@@ -19,7 +19,7 @@ export const About = () => {
             (I hardly participate &#x1F913;)
           </p>
         </div>
-        <div className="column col-6">
+        <div className="column col-6 hide-sm">
           <SkillCards />
         </div>
       </div>

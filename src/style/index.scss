@@ -55,14 +55,9 @@ h1 {
 	font-weight: 600;
 }
 
-@media screen and (min-width: 961px) {
+@media screen and (max-width: 600px) {
     .page {
-        main {
-            .bg {
-                right: 5vw;
-                top: calc(50% - 162.4px);
-            }
-        }
+
     }
 }
 
@@ -74,6 +69,8 @@ h1 {
             margin-top: 60px;
 
             .bg {
+              width: 324.81px;
+              position: absolute;
               top: calc(50% - 162.4px);
               left: calc(50% - 152px);
             }

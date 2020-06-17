@@ -48,6 +48,7 @@ function _Link({ path, icon, tooltipText }) {
       to={path}
       className="tooltip tooltip-right text-dark"
       data-tooltip={tooltipText}
+      activeClassName="active"
     >
       <FontAwesomeIcon icon={icon} />
     </NavLink>
@@ -57,7 +58,7 @@ function _Link({ path, icon, tooltipText }) {
 function NavbarLinks({open=false}) {
     return !open ? null :
       <div className="navbar-links bg-gray">
-        <_Link path="/" icon="igloo" tooltipText="Home" />
+        <_Link path="/home" icon="igloo" tooltipText="Home" />
         <_Link path="/about" icon="user" tooltipText="About" />
         <_Link path="/skills" icon="cogs" tooltipText="Skills" />
         <_Link path="/projects" icon="eye" tooltipText="Projects" />
