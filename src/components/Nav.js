@@ -21,11 +21,14 @@ export const Nav = () => {
         <NavbarLinks open={true} />
       </section>
       <section className="social hide-sm">
-        <a href="#" className="btn btn-link">
-          <i data-eva="linkedin-outline" />
+          <a href="https://www.linkedin.com/in/yego-allan-8b00258b/" target="_blank" className="btn btn-link">
+          <FontAwesomeIcon icon="linkedin" />
         </a>
-        <a href="#" className="btn btn-link">
-          <i data-eva="github-outline" />
+        <a href="https://github.com/yegow" target="_blank" className="btn btn-link">
+          <FontAwesomeIcon icon="github-square" />
+        </a>
+        <a href="https://www.hackerrank.com/devyego" target="_blank" className="btn btn-link">
+          <FontAwesomeIcon icon="hackerrank" />
         </a>
       </section>
       <section className="humburger"
