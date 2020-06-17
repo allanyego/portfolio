@@ -10,6 +10,8 @@ html, body {
 	color: #444;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
 }
 
 .result {
@@ -21,7 +23,8 @@ html, body {
 
 .page {
 	display: flex;
-	height: 100vh;
+    height: 99vh;
+	max-height: 100vh;
 }
 
 .page main {
@@ -32,6 +35,11 @@ html, body {
 	padding: 4em 2em;
 	overflow-y: auto;
 	overflow-x: hidden;
+
+    .bg {
+        position: absolute;
+        width: 324.81px;
+    }
 }
 
 img {
@@ -49,7 +57,7 @@ h1 {
 
 @media screen and (max-width: 600px) {
     .page {
-        
+
     }
 }
 
