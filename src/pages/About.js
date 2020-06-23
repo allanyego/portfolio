@@ -16,7 +16,7 @@ export const About = () => {
           </p>
           <p>
             I am a passionate person, detail junkie and lover of extreme sports
-            (I hardly participate &#x1F913;)
+            (I hardly participate <span role="img" aria-label="smiley face">&#x1F913;</span>)
           </p>
         </div>
         <div className="column col-6 hide-sm">

@@ -1,79 +1,104 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-	font: 14px/1.21 "b612" ,'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  font: 14px/1.21 "b612", "Helvetica Neue", arial, sans-serif;
+  font-weight: 400;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
-.result {
-	padding: 10px;
-	margin: 10px;
-	background: white;
-	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+.btn {
+  font-size: 1.2rem !important;
+  line-height: 0.2rem !important;
+  padding: 1.25rem 1.4rem !important;
 }
 
-.page {
-	display: flex;
-    height: 99vh;
-	max-height: 100vh;
-}
-
-.page main {
-	flex-grow: 1;
-	display: flex;
-	align-items: center;
-	height: 100%;
-	padding: 4em 2em;
-	overflow-y: auto;
-	overflow-x: hidden;
-
-    .bg {
-        position: absolute;
-        width: 324.81px;
-    }
-}
-
-img {
-	width: 100%;
+.form-input {
+  font-size: 1.1rem;
 }
 
 .chip {
-	padding: 1.2em !important;
+  padding: 1.2em !important;
+}
+
+.result {
+  padding: 10px;
+  margin: 10px;
+  background: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.page {
+  display: flex;
+  height: 99vh;
+  max-height: 100vh;
+}
+
+.page main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 4em 2em;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .home {
+    width: 100%;
+  }
+
+  .bg {
+    position: absolute;
+    width: 250px;
+  }
+}
+
+img {
+  width: 100%;
 }
 
 h1 {
-	font-size: 3.375em;
-	font-weight: 600;
+  // font-size: 3.375em;
+  font-size: calc(1.7em + 2vw);
+  font-weight: 600;
 }
 
 @media screen and (max-width: 600px) {
-    .page {
+  .page {
+    main {
+      margin-top: 60px;
 
+      .bg {
+        position: absolute;
+        top: calc(50% - 134px);
+        left: calc(50% - 125px);
+      }
     }
+  }
 }
 
 @media screen and (max-width: 960px) {
-    .page {
-        flex-direction: column;
+  .page {
+    flex-direction: column;
 
-        main {
-            margin-top: 60px;
+    main {
+      margin-top: 60px;
 
-            .bg {
-              width: 324.81px;
-              position: absolute;
-              top: calc(50% - 162.4px);
-              left: calc(50% - 152px);
-            }
-        }
+      .bg {
+        //   width: 324.81px;
+        position: absolute;
+        top: calc(50% - 162.4px);
+        //   left: calc(50% - 152px);
+        right: 15%;
+      }
     }
+  }
 }

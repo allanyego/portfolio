@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../style/header.scss";
 import { NavLink } from "react-router-dom";
+import Socials from "./Socials";
 
 export const Nav = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -20,17 +21,7 @@ export const Nav = () => {
       <section className="links hide-sm">
         <NavbarLinks open={true} />
       </section>
-      <section className="social hide-sm">
-          <a href="https://www.linkedin.com/in/yego-allan-8b00258b/" target="_blank" className="btn btn-link">
-          <FontAwesomeIcon icon="linkedin" />
-        </a>
-        <a href="https://github.com/yegow" target="_blank" className="btn btn-link">
-          <FontAwesomeIcon icon="github-square" />
-        </a>
-        <a href="https://www.hackerrank.com/devyego" target="_blank" className="btn btn-link">
-          <FontAwesomeIcon icon="hackerrank" />
-        </a>
-      </section>
+      <Socials />
       <section className="humburger"
         style={{
         fontSize: "2em",
@@ -45,7 +36,7 @@ export const Nav = () => {
   );
 };
 
-function _Link({ path, icon, tooltipText }) {
+function YLink({ path, icon, tooltipText }) {
   return (
     <NavLink
       to={path}
@@ -61,10 +52,10 @@ function _Link({ path, icon, tooltipText }) {
 function NavbarLinks({open=false}) {
     return !open ? null :
       <div className="navbar-links bg-gray">
-        <_Link path="/home" icon="igloo" tooltipText="Home" />
-        <_Link path="/about" icon="user" tooltipText="About" />
-        <_Link path="/skills" icon="cogs" tooltipText="Skills" />
-        <_Link path="/projects" icon="eye" tooltipText="Projects" />
-        <_Link path="/contact" icon="envelope" tooltipText="Contact" />
+        <YLink path="/home" icon="igloo" tooltipText="Home" />
+        <YLink path="/about" icon="user" tooltipText="About" />
+        <YLink path="/skills" icon="cogs" tooltipText="Skills" />
+        <YLink path="/projects" icon="eye" tooltipText="Projects" />
+        <YLink path="/contact" icon="envelope" tooltipText="Contact" />
       </div>
 }

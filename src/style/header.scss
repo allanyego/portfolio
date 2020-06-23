@@ -12,6 +12,11 @@
   section {
     flex-direction: inherit;
     align-items: center;
+    width: 60px;
+  }
+
+  a:hover {
+    color: $primary-color !important;
   }
 
   .navbar-links {
@@ -22,10 +27,6 @@
       justify-self: center;
       font-size: 1.7em;
       display: block;
-      
-      &:hover {
-        color: $primary-color !important;
-      }
 
       &.active {
         color: $primary-color !important;
@@ -42,7 +43,7 @@
   .navbar {
 
     section {
-      width: 60px;
+      
     }
   }
 }

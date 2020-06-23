@@ -1,58 +1,31 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState, useEffect } from "react";
 
 import { Section } from "../components/Section";
-import "../style/project.scss";
 
-const projects = [
-  {
-    name: "E-hosi"
-  },
-  {
-    name: "Ride Easy"
-  },
-  {
-    name: "Orient Insurance"
-  },
-  {
-    name: "E-booking"
-  }
-];
+import "../style/project.scss";
+import { Project } from "../components/Project";
+import { getProjects } from "../getProjects";
 
 export const Projects = () => {
+  const [projects, setProjects] = useState(null);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    getProjects()
+      .then(projects => {
+        setProjects(projects);
+        setLoading(false);
+      })
+  }, []);
+
   return (
     <Section title="Projects">
       <div className="columns">
-        {projects.map((project, i) => (
-          <Project key={i} project={project} />
+        {loading && <div>Some loading div</div>}
+        {projects?.length && projects.map(project => (
+          <Project key={project.id} {...project} />
         ))}
       </div>
     </Section>
   );
 };
-
-function Project({ project }) {
-  return (
-    <div className="column col-xs-12 col-sm-6 col-md-4 col-3"
-    style={{
-        marginBottom: "0.7em"
-    }}>
-      <div className="card project-card">
-        <div className="card-header">
-          <h3>{project.name}</h3>
-          <div className="card-subtitle text-gray">
-            Check it <FontAwesomeIcon icon="external-link-alt" />
-          </div>
-        </div>
-        <div className="card-body">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution
-        </div>
-        <div className="card-footer">
-          <span className="chip">JS</span>
-        </div>
-      </div>
-    </div>
-  );
-}

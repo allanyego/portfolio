@@ -3,7 +3,7 @@ import posed, { PoseGroup } from "react-pose";
 
 const Card = posed.div({
   enter: {
-    y: 0,
+    x: 0,
     opacity: 1,
     delay: 300,
     transition: {
@@ -12,8 +12,8 @@ const Card = posed.div({
     }
   },
   exit: {
-    y: 50,
-    opacity: 0,
+    x: 100,
+    opacity: 0.05,
     transition: { duration: 150 }
   }
 });
@@ -29,7 +29,7 @@ export const SkillCards = () => {
         const next = current + 1;
         setCurrent(next);
       }
-    }, 2500);
+    }, 2800);
 
     return () => clearInterval(interval);
   }, [current, skills]);
@@ -43,7 +43,7 @@ export const SkillCards = () => {
       }}
     >
       <div
-        className="column col-6"
+        className="column col-4"
         style={{
           position: "absolute"
         }}

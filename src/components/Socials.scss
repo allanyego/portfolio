@@ -1,0 +1,23 @@
+.socials {
+  display: grid;
+  gap: .6em;
+  margin-bottom: 1.5em;
+
+  a {
+    font-size: 1.6em !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .socials {
+    grid-auto-flow: column;
+    margin: 0 1.5em 0 5em !important;
+    justify-content: flex-end;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: .7rem !important;
+    }
+  }
+}
