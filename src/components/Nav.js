@@ -22,13 +22,15 @@ export const Nav = () => {
         <NavbarLinks open={true} />
       </section>
       <Socials />
-      <section className="humburger"
+      <section
+        className="humburger"
         style={{
-        fontSize: "2em",
-        paddingRight: ".5em",
-        display: "flex",
-        justifyContent: "flex-end"
-      }}>
+          fontSize: "2em",
+          paddingRight: ".5em",
+          display: "flex",
+          justifyContent: "flex-end",
+        }}
+      >
         <FontAwesomeIcon icon="bars" onClick={toggle} />
       </section>
       <NavbarLinks open={navOpen} />
@@ -49,13 +51,14 @@ function YLink({ path, icon, tooltipText }) {
   );
 }
 
-function NavbarLinks({open=false}) {
-    return !open ? null :
-      <div className="navbar-links bg-gray">
-        <YLink path="/home" icon="igloo" tooltipText="Home" />
-        <YLink path="/about" icon="user" tooltipText="About" />
-        <YLink path="/skills" icon="cogs" tooltipText="Skills" />
-        <YLink path="/projects" icon="eye" tooltipText="Projects" />
-        <YLink path="/contact" icon="envelope" tooltipText="Contact" />
-      </div>
+function NavbarLinks({ open = false }) {
+  return !open ? null : (
+    <div className="navbar-links bg-gray">
+      <YLink path="/home" icon="igloo" tooltipText="Home" />
+      <YLink path="/about" icon="user" tooltipText="About" />
+      <YLink path="/skills" icon="cogs" tooltipText="Skills" />
+      <YLink path="/projects" icon="eye" tooltipText="Projects" />
+      <YLink path="/contact" icon="envelope" tooltipText="Contact" />
+    </div>
+  );
 }

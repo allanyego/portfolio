@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "spectre.css";
+// import "spectre.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";

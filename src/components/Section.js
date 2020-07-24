@@ -22,7 +22,6 @@ export const Section = ({ title, children }) => {
         maxHeight: "100%",
       }}
     >
-      {/* <h1>{title}</h1> */}
       <motion.h1
       variants={sectionTitle}
       initial="hidden"

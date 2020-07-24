@@ -1,5 +1,6 @@
 import React from "react";
 import { Section } from "../components/Section";
+import { motion } from "framer-motion";
 
 const skills = [
   "TypeScript",
@@ -13,8 +14,35 @@ const skills = [
   "Git",
   "Angular",
   "JSON",
-  "RESTful API"
+  "RESTful API",
 ];
+
+const container = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const item = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 export const Skills = () => {
   return (
@@ -36,13 +64,18 @@ export const Skills = () => {
           </p>
           <p>Find me on LinkedIn or just contact me.</p>
         </div>
-        <div className="column col-sm-12 col-6">
-          {skills.map(skill => (
-            <span className="chip" key={skill}>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className="column col-sm-12 col-6"
+        >
+          {skills.map((skill) => (
+            <motion.span className="chip" key={skill} variants={item}>
               {skill}
-            </span>
+            </motion.span>
           ))}
-        </div>
+        </motion.div>
       </div>
     </Section>
   );

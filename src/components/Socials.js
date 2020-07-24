@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 
 import "./Socials.scss";
 
@@ -21,14 +22,16 @@ export default function Socials() {
 
 function IconLink({ iconName, link }) {
   return (
-    <a
+    <motion.a
       href={link}
       target="_blank"
       className="btn btn-link text-gray"
       rel="noopener noreferrer"
+      whileHover={{
+        scale: 1.05
+      }}
     >
       <FontAwesomeIcon icon={["fab", iconName]} />
-    </a>
+    </motion.a>
   );
 }
-
