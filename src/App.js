@@ -3,10 +3,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
 } from "react-router-dom";
 
-import { Nav } from "./components/Nav";
+import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Skills } from "./pages/Skills";
@@ -17,7 +17,7 @@ export default function App() {
   return (
     <div className="page">
       <Router>
-        <Nav />
+        <Header />
         <main>
           <Switch>
             <Route path="/home" exact component={Home} />

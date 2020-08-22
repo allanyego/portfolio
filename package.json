@@ -11,6 +11,7 @@
     "@fortawesome/free-solid-svg-icons": "5.13.0",
     "@fortawesome/react-fontawesome": "0.1.10",
     "@popmotion/popcorn": "^0.4.4",
+    "formik": "^2.1.5",
     "framer": "^1.2.5",
     "framer-motion": "^2.1.0",
     "node-sass": "^4.14.1",
@@ -20,7 +21,8 @@
     "react-pose-text": "3.1.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.0.1",
-    "spectre.css": "0.5.8"
+    "spectre.css": "0.5.8",
+    "yup": "^0.29.3"
   },
   "devDependencies": {
     "node-sass": "^4.14.1",

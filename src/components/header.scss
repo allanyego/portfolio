@@ -2,8 +2,17 @@ $primary-color: #2e86ab;
 
 .navbar {
   flex-direction: column;
-  width: 60px;
-  position: relative;
+  min-width: 60px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  flex-wrap: nowrap !important;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 
   img {
     max-width: 60px;
@@ -41,9 +50,7 @@ $primary-color: #2e86ab;
 
 @media screen and (max-width: 1280px) {
   .navbar {
-
     section {
-      
     }
   }
 }
@@ -54,14 +61,14 @@ $primary-color: #2e86ab;
     width: 100%;
     position: fixed;
 
-    .links, .social {
+    .links,
+    .social {
       display: flex;
       align-items: center;
       width: fit-content;
     }
 
     .links {
-
       .navbar-links {
         grid-auto-flow: column;
       }
@@ -70,19 +77,18 @@ $primary-color: #2e86ab;
 }
 
 @media screen and (max-width: 600px) {
-    .navbar {
-
-        .navbar-links {
-          position: fixed;
-          top: 60px;
-          width: 100%;
-          grid-auto-flow: column;
-          gap: 0;
-          padding: 1em 1.5em;
-        }
-
-      .humburger {
-        display: flex !important;
-      }
+  .navbar {
+    .navbar-links {
+      position: fixed;
+      top: 60px;
+      width: 100%;
+      grid-auto-flow: column;
+      gap: 0;
+      padding: 1em 1.5em;
     }
+
+    .humburger {
+      display: flex !important;
+    }
+  }
 }

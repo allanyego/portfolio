@@ -15,9 +15,18 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import App from "./App";
-import "./style/index.scss";
+import "./index.scss";
 
-library.add(fab, faExternalLinkAlt, faIgloo, faUser, faCogs, faEye, faEnvelope, faBars);
+library.add(
+  fab,
+  faExternalLinkAlt,
+  faIgloo,
+  faUser,
+  faCogs,
+  faEye,
+  faEnvelope,
+  faBars
+);
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import "../style/header.scss";
 import { NavLink } from "react-router-dom";
 import Socials from "./Socials";
+import "./header.scss";
 
-export const Nav = () => {
+export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
   const toggle = () => setNavOpen(!navOpen);
 
@@ -42,7 +42,7 @@ function YLink({ path, icon, tooltipText }) {
   return (
     <NavLink
       to={path}
-      className="tooltip tooltip-right text-dark"
+      className="tooltip tooltip-bottom text-dark"
       data-tooltip={tooltipText}
       activeClassName="active"
     >
