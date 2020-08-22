@@ -9,6 +9,7 @@ import {
   faIgloo,
   faUser,
   faCogs,
+  faCaretLeft,
   faEye,
   faEnvelope,
   faBars,
@@ -23,6 +24,7 @@ library.add(
   faIgloo,
   faUser,
   faCogs,
+  faCaretLeft,
   faEye,
   faEnvelope,
   faBars

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import TechChip from "./TechChip";
 import testProjectImage from "../assets/project-tippify.png";
 import "./project.scss";
 
@@ -32,10 +33,10 @@ export function Project({ name, client, url, description, technologies }) {
           </Link> */}
         </div>
         <div className="card-header">
-          <div class="card-title h3">
+          <div className="card-title h4">
             <strong>{name}</strong>
           </div>
-          <div class="card-subtitle h4 text-gray">{client}</div>
+          <div className="card-subtitle h5 text-gray">{client}</div>
         </div>
         <div className="card-body">{description}</div>
         <div className="card-footer">
@@ -46,8 +47,4 @@ export function Project({ name, client, url, description, technologies }) {
       </div>
     </div>
   );
-}
-
-function TechChip({ techName }) {
-  return <span className="chip">{techName}</span>;
 }

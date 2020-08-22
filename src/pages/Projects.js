@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Section } from "../components/Section";
 import { Project } from "../components/Project";
 import { getProjects } from "../getProjects";
+import ProjectPage from "./Project";
 
 export const Projects = () => {
   const [projects, setProjects] = useState(null);
@@ -22,6 +23,7 @@ export const Projects = () => {
         {projects?.length &&
           projects.map((project) => <Project key={project.id} {...project} />)}
       </div>
+      <ProjectPage />
     </Section>
   );
 };

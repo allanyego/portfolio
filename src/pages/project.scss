@@ -1,0 +1,21 @@
+.project-page {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 75%;
+    height: 100%;
+    background-color: #fff;
+    padding: 1.5em 2em;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        button.btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // font-size: 2rem !important;
+        }
+    }
+}
