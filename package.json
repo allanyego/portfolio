@@ -10,17 +10,17 @@
     "@fortawesome/free-regular-svg-icons": "5.13.0",
     "@fortawesome/free-solid-svg-icons": "5.13.0",
     "@fortawesome/react-fontawesome": "0.1.10",
-    "node-sass": "^4.14.1",
+    "node-sass": "^9.0.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-pose": "4.0.10",
     "react-pose-text": "3.1.0",
     "react-router-dom": "5.2.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "spectre.css": "0.5.8"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
+    "node-sass": "^9.0.0",
     "typescript": "3.8.3"
   },
   "scripts": {
